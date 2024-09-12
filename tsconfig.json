@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "moduleResolution": "Node10",
+    "declaration": false,
+    "strict": true,
+    "noEmitOnError": true,
+    "esModuleInterop": true,
+    "target": "ES2015",
+    "sourceMap": false,
+    "outDir": "./dist",
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
