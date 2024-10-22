@@ -2,6 +2,9 @@ import swcLoader from 'swc-loader';
 import { LoaderContext } from 'webpack';
 
 export = function loader(this: LoaderContext<any>, contents: string, inputSourceMap?: Record<string, any>) {
+  if (typeof inputSourceMap === 'string') {
+    inputSourceMap = JSON.parse(inputSourceMap);
+  }
   const thisProxy = new Proxy(this, {
     get(target, p, receiver) {
       if (p === 'getOptions') {
